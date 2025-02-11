@@ -1,0 +1,13 @@
+items:
+  - text: home
+    url: /
+    link: index.md
+  - text: menu
+    url: /pages/menu.html
+    link: pages/menu.md
+  - text: calendar
+    url: /pages/calendar.html
+    link: pages/calendar.md
+  - text: about
+    url: /pages/about.html
+    link: pages/about.md

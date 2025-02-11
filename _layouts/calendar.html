@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include head.html %}
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <script>
+      const events = {{ site.data.events | jsonify }}
+        .map((event, index) => ({...event, id: "event-" + index}));
+      document.addEventListener('DOMContentLoaded', function() {
+        renderCalendar({ events });
+      })
+    </script>
+  </head>
+
+  <body>
+    {% include nav.html %}
+    {% include header.html %}
+
+    <section id="calendar"></section>
+
+    {% for event in site.data.events %}
+    {% include event_dialog.html event=event index=forloop.index0 %}
+    {% endfor %}
+
+    {% include footer.html %}
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
+

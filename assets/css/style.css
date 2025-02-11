@@ -1,0 +1,125 @@
+html {
+  background: #3a3a3a;
+}
+
+body {
+  margin: 0px auto;
+  width: 1024px;
+  height: 100vh;
+  max-width: 1024px;
+  background: #292929;
+  color: #d8d8d8;
+}
+
+body section,
+body footer {
+  padding: 0px 24px;
+}
+
+body header {
+  padding: 48px 24px;
+}
+
+/* footer */
+footer {
+  position: fixed;
+  top: calc(100vh - 48px);
+}
+
+/* aside */
+aside {
+  position: fixed;
+  top: 0;
+  background: #212121;
+  width: 100%;
+  max-width: 1024px;
+  z-index: 2;
+  box-shadow: 0px 2px 2px #1a1a1a;
+}
+
+aside nav {
+  float: left;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0px 8px;
+}
+
+aside nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+aside nav ul li {
+  float: left;
+  position: relative;
+}
+
+aside nav ul li a:visited,
+aside nav ul li a {
+  text-decoration: none;
+  color: #bdbdbd;
+  display: block;
+  padding: 15px;
+  font-family: "Source Code Pro", monospace;
+  line-height: 20px;
+  margin-bottom: -1px;
+  box-shadow: 0;
+}
+
+aside nav ul li a:hover,
+aside nav ul li a:active,
+aside nav ul li a.active {
+  margin-bottom: -3px;
+  text-decoration: none;
+  color: #dbdbdb;
+  font-weight: bolder;
+}
+
+aside nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+:root {
+  --fc-small-font-size: 0.85em;
+  --fc-page-bg-color: #3f3f3f;
+  --fc-neutral-bg-color: #696969;
+  --fc-neutral-text-color: #3f3f3f;
+  --fc-border-color: #ddd;
+
+  --fc-button-text-color: #c3c3c3;
+  --fc-button-bg-color: #2a2a2a;
+  --fc-button-border-color: #3d3d3d;
+  --fc-button-hover-bg-color: #696969;
+  --fc-button-hover-border-color: #a1a1a1;
+  --fc-button-active-bg-color: #696969;
+  --fc-button-active-border-color: #a1a1a1;
+
+  --fc-event-bg-color: #494949;
+  --fc-event-border-color: #828282;
+  --fc-event-text-color: #fff;
+  --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+
+  --fc-more-link-bg-color: #d0d0d0;
+  --fc-more-link-text-color: inherit;
+
+  --fc-event-resizer-thickness: 8px;
+  --fc-event-resizer-dot-total-width: 8px;
+  --fc-event-resizer-dot-border-width: 1px;
+
+  --fc-non-business-color: rgba(215, 215, 215, 0.3);
+  --fc-bg-event-color: rgb(143, 223, 130);
+  --fc-bg-event-opacity: 0.3;
+  --fc-highlight-color: rgba(188, 232, 241, 0.3);
+  --fc-today-bg-color: #696969;
+  --fc-now-indicator-color: darkred;
+  --fc-list-event-dot-width: 10px;
+  --fc-list-event-hover-bg-color: #4a4a4a;
+}
+
+.fc-col-header-cell {
+  background: #696969;
+  color: #c3c3c3;
+}

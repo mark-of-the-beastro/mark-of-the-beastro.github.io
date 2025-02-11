@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    {% include nav.html %}
+    {% include header.html %}
+
+    <section id="content">
+      {{ content }}
+    </section>
+
+    {% include footer.html %}
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
