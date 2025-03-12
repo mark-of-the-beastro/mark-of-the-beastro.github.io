@@ -17,6 +17,8 @@ permalink: /menu
 
 </section>
 
+<hr>
+
 <section id="temptations" class="menu-section">
 
   <h2>Temptations</h2>
@@ -30,6 +32,8 @@ permalink: /menu
   </ul>
 
 </section>
+
+<hr>
 
 <section id="weekend-brunch" class="menu-section">
 
