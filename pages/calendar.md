@@ -1,3 +1,4 @@
 ---
 layout: calendar
+permalink: /calendar
 ---

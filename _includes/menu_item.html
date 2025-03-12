@@ -1,0 +1,12 @@
+<li class="menu-item">
+  <h3 class="menu-item-header">
+    <span>{{item.name}}</span>
+    <span>{{item.price}}</span>
+  </h3>
+  <p>{{item.description}}</p>
+  <ul>
+    {% for option in item.options %}
+    <li>{{option}}</li>
+    {% endfor %}
+  </ul>
+</li>

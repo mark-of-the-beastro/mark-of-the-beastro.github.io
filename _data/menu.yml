@@ -1,0 +1,151 @@
+beelzegrub:
+  - name: Belgian Waffle
+    price: $8
+    description: A golden Belgian waffle with your choice of toppings.
+    options:
+      - Butter, syrup, peanut butter, whipped cream, strawberry sauce, blackberry sauce
+
+  - name: Breakfast Panini
+    price: $12
+    description: Tofu frittata with peppers + onions, sundried tomatoes, spinach, mozzarella, and pesto.
+
+  - name: Portobello Panini
+    price: $12
+    description: Marinated portobello mushrooms, sundried tomatoes, spinach, mozzarella, and mango chutney.
+
+  - name: Baked Tofu Panini
+    price: $12
+    description: Lemon BBQ baked tofu, pear, roasted red pepper, caramelized onion, spinach, mozzarella, and pesto.
+
+  - name: Chick'n Salad Sandwich
+    price: $12
+    description: Delicious zesty chicken salad with fresh lettuce and tomatoes on sour dough.
+    options:
+      - $2 &ndash; make it a melt!
+
+  - name: Grilled Cheese
+    price: $6.66
+    description: Grilled cheese on french bread.
+    options:
+      - $.50 each &ndash; caramelized onions, spinach, fresh/sundried tomatoes, pesto, mango chutney
+      - $1 &ndash; sliced avocado
+
+  - name: Grilled PB&J or PB&P
+    price: $6.66
+    description: America's favorite sandwich grilled up to perfection.
+    options:
+      - Feeling adventurous? Try a PB&P. Peanut butter & perpperoncini!
+
+  - name: Chick'n Wrap
+    price: $13.50
+    description: Our famous fried chicken tossed in sauce with spinach, tomatoes, onions, and cheddar cheese.
+    options:
+      - Spicy, buffalo, hunny mustard
+
+  - name: Nachos
+    price: $12
+    description: A massive plate of chips covered in house made cheese sauce, black beans, pico, jalepeños, and sour cream.
+
+  - name: Quinoa Bowl
+    price: $12
+    description: Black bean + bell pepper quinoa salad on a bed of spinach topped with sliced avocado and a creamy pesto dressing.
+    extra:
+      type: list
+      title: options
+      data:
+        - GF
+        - Soy-free without dressing
+
+temptations:
+  - name: Milkshakes
+    price: $9
+    description: Vanilla, Strawberry, Blackberry, or Cookies and Cream.
+    options:
+      - Ask about our seasonal flavors!
+
+  - name: Affogato
+    price: $6.66
+    description: Blue Copper Espresso over Normal® vanilla ice cream.
+
+  - name: Ice Cream Scoop
+    price: $3 / $6
+    description: Normal® vanilla ice cream! Single scoop or double.
+
+  - name: Sundae
+    price: $9
+    description: Two scoops vanilla ice cream with the works, chocolate sauce, sprinkles, whipped cream, and a cherry on top.
+
+weekend_brunch:
+  - name: Chick'n & Waffles
+    price: $15
+    description: House made southern fried chick'n on top of a golden waffle. Served with butter and syrup.
+
+  - name: Biscuit Sandwich
+    price: $8
+    description: Souther style fried chick'n smothered in gray on a house made biscuit.
+
+  - name: Biscuits & Gravy
+    price: $4 &ndash; $12
+    description: Fluffy buttery biscuits topped with savory gravy.
+    options:
+      - 1 for $4 &Vert; 2 for $6 &Vert; 3 for $9 &Vert; 4 for $12
+
+drinks:
+  - name: Americano
+    prices:
+      - $4
+      - $4.50
+      - $5
+
+  - name: Latte / Chai
+    prices:
+      - $4.50
+      - $5
+      - $5.50
+      - $6
+
+  - name: Mocha
+    prices:
+      - $5
+      - $5.50
+      - $6
+      - $6.50
+
+  - name: Cappuccino / Cortado
+    prices:
+      - $4.50
+
+  - name: Espresso Shot
+    prices:
+      - $3.50
+
+  - name: Tea Latte
+    prices:
+      - $4
+      - $4.50
+      - $5
+
+  - name: Steamer
+    prices:
+      - $4
+      - $4.25
+      - $4.50
+      - $4.75
+
+  - name: Hot Tea
+    prices:
+      - $2
+
+  - name: Italian Soda
+    prices:
+      - $5
+      - $5.50
+      - $6
+
+  - name: Taproot Soda
+    prices:
+      - $2.50
+
+  - name: Soda / Bottled Water
+    prices:
+      - $2

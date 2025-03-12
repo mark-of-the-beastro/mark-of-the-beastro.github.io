@@ -4,26 +4,119 @@ html {
 
 body {
   margin: 0px auto;
-  width: 1024px;
+  width: 768px;
   height: 100vh;
   max-width: 100%;
   background: #292929;
   color: #d8d8d8;
+  font-family: Palatino, Didot, Georgia, serif;
 }
 
-body section,
-body footer {
-  padding: 0px 24px;
+h1 {
+  font-size: x-large;
 }
 
-body header {
-  padding: 48px 24px;
+h2 {
+  font-size: larger;
+  font-variant-caps: small-caps;
+}
+
+h3 {
+  font-size: large;
+  font-variant-caps: small-caps;
+}
+
+#content {
+  padding-top: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+}
+
+.menu-section {
+  border-top: 1px solid gray;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0px 12px;
+}
+
+.menu-item {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 0px 16px;
+  margin-bottom: 4px;
+
+  p {
+    margin: 8px 0px;
+  }
+
+  ul {
+    list-style: square;
+    margin: 8px -16px;
+  }
+}
+
+.menu-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#menu-header {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    margin-right: 16px;
+  }
+
+  a {
+    font-size: initial;
+    background-color: #292929;
+    border: 1px solid gray;
+    margin-left: 32px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #d8d8d8;
+  }
+
+  a.active {
+    background-color: black;
+  }
 }
 
 /* footer */
 footer {
+  background-color: #212121;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  bottom: 0;
   position: fixed;
-  top: calc(100vh - 48px);
+  width: 100%;
+  max-width: 768px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0px -2px 2px #1a1a1a;
+
+  section {
+    align-self: center;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+
+    small {
+      font-size: 8px;
+    }
+  }
 }
 
 /* aside */
@@ -32,7 +125,7 @@ aside {
   top: 0;
   background: #212121;
   width: 100%;
-  max-width: 1024px;
+  max-width: 768px;
   z-index: 2;
   box-shadow: 0px 2px 2px #1a1a1a;
 }
@@ -61,7 +154,7 @@ aside nav ul li a {
   color: #bdbdbd;
   display: block;
   padding: 15px;
-  font-family: "Source Code Pro", monospace;
+  font-family: Monaco, Courier, monospace;
   line-height: 20px;
   margin-bottom: -1px;
   box-shadow: 0;

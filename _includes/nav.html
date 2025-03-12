@@ -3,8 +3,9 @@
     <ul>
       {% for item in site.data.nav.items %}
       <li>
+        {% assign base = page.url | split: "/" | slice: 0, 2 | join: "/" %}
         <a
-          class="{% if item.url == page.url %}active{% endif %}"
+          class="{% if base == item.url %}active{% endif %}"
           href="{% link {{ item.link }} %}"
         >
           {{ item.text }}

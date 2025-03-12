@@ -1,5 +1,16 @@
 <footer>
-  <p>
-    <small> footer: hi </small>
-  </p>
+  <section>
+    <small><strong>mark of the beastro</strong></small>
+    <small>666 s. state st.</small>
+    <small>salt lake city, ut</small>
+  </section>
+
+  <section id="todays-hours">
+    <small><strong>hours</strong></small>
+  </section>
 </footer>
+
+<script>
+  const days = {{ site.data.hours | jsonify }};
+  document.addEventListener("DOMContentLoaded", () => renderHours(days));
+</script>

@@ -26,3 +26,23 @@ const renderCalendar = ({ events }) => {
   calendar.render();
   return calendar;
 };
+
+const renderHours = (days) => {
+  const element = document.getElementById("todays-hours");
+  const dayOfWeek = [
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+  ][new Date().getDay()];
+  const hours = days[dayOfWeek];
+  const dayElement = document.createElement("small");
+  dayElement.innerHTML = dayOfWeek;
+  element.appendChild(dayElement);
+  const hoursElement = document.createElement("small");
+  hoursElement.innerHTML = `${hours.start}&ndash;${hours.end}`;
+  element.appendChild(hoursElement);
+};
