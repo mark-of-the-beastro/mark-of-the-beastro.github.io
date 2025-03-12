@@ -30,7 +30,7 @@ h3 {
   padding-top: 48px;
   padding-left: 24px;
   padding-right: 24px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 96px);
   overflow-y: scroll;
 }
 
@@ -97,7 +97,7 @@ footer {
   z-index: 2;
   display: flex;
   flex-direction: row;
-  height: 32px;
+  height: 48px;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -114,7 +114,7 @@ footer {
     flex-direction: column;
 
     small {
-      font-size: 8px;
+      font-size: 10px;
     }
   }
 }
