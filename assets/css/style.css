@@ -14,16 +14,37 @@ body {
 
 h1 {
   font-size: x-large;
+  padding: 16px 0px;
+  margin: 0;
 }
 
 h2 {
   font-size: larger;
   font-variant-caps: small-caps;
+  padding: 16px 0px;
+  margin: 0;
 }
 
 h3 {
   font-size: large;
   font-variant-caps: small-caps;
+}
+
+button,
+.button {
+  background-color: #292929;
+  border: medium double gray;
+  border-radius: 4px;
+  color: #d8d8d8;
+  padding: 6px 12px;
+  font-family: inherit;
+}
+
+button:hover,
+.button:hover {
+  background-color: black;
+  color: lightgray;
+  cursor: pointer;
 }
 
 #content {
@@ -34,16 +55,20 @@ h3 {
   overflow-y: scroll;
 }
 
-#menu-content {
+#menu-content,
+#calendar-content {
   overflow-y: scroll;
-  margin-top: 64px;
-  height: calc(100vh - 160px);
+  margin-top: 68px;
+  height: calc(100vh - 164px);
 }
 
-#menu-header {
+#menu-header,
+#calendar-header {
   justify-self: center;
   display: flex;
   flex-direction: row;
+  column-gap: 16px;
+  align-items: center;
   position: fixed;
   top: 48px;
   width: 100%;
@@ -51,20 +76,10 @@ h3 {
   padding-bottom: 16px;
   border-bottom: 1px solid gray;
 
-  span {
-    margin-right: 16px;
-  }
-
   a {
     font-size: initial;
-    background-color: #292929;
-    border: 1px solid gray;
-    margin-left: 32px;
-    border-radius: 4px;
-    padding: 4px 8px;
     text-decoration: none;
     font-weight: normal;
-    color: #d8d8d8;
   }
 
   a.active {
@@ -97,6 +112,87 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#calendar,
+#event-list {
+  margin: 16px 0px;
+}
+
+#event-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  .event-list-date-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-list-date {
+    display: inline-flex;
+    justify-content: space-between;
+    border: medium solid lightgray;
+    background-color: gray;
+    color: black;
+    padding: 6px 12px;
+    align-content: center;
+    font-variant-caps: small-caps;
+    font-size: small;
+  }
+
+  button.event-list-item,
+  .empty-event-list-item {
+    display: inline-grid;
+    align-items: center;
+    border: unset;
+    font-size: initial;
+    border-radius: unset;
+    border-left: medium solid #696969;
+    border-right: medium solid #696969;
+    border-bottom: thin solid #696969;
+    background-color: #212121;
+    padding: 6px 12px;
+  }
+
+  button.event-list-item {
+    display: inline-grid;
+    grid-template-columns: 128px 1fr;
+    justify-items: start;
+    cursor: pointer;
+  }
+
+  .empty-event-list-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    font-variant-caps: small-caps;
+    font-style: italic;
+  }
+
+  .event-time {
+    color: #b9b9b9;
+    font-variant-caps: small-caps;
+    font-size: small;
+  }
+}
+
+#event-list-buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+dialog[open] {
+  width: 768px;
+  max-width: 70%;
+  background-color: #212121;
+  color: #d8d8d8;
+  border: thick double #d8d8d8;
+  box-shadow: 8px 8px 6px #1a1a1a;
+
+  button {
+    float: right;
+  }
 }
 
 /* footer */

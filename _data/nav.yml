@@ -7,7 +7,7 @@ items:
     link: pages/menu.md
   - text: calendar
     url: /calendar
-    link: pages/calendar.md
+    link: pages/weekly_calendar.md
   - text: about
     url: /about
     link: pages/about.md

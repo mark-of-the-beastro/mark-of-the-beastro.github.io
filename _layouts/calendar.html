@@ -6,20 +6,35 @@
     <script>
       const events = {{ site.data.events | jsonify }}
         .map((event, index) => ({...event, id: "event-" + index}));
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", () => {
         renderCalendar({ events });
-      })
+        renderEventList({ events });
+        document.getElementById("event-list-forward").addEventListener("click", () => {
+          moveEventListForward({ events });
+        });
+        document.getElementById("event-list-backward").addEventListener("click", () => {
+          moveEventListBackward({ events });
+        });
+        document.getElementById("event-list-today").addEventListener("click", () => {
+          resetEventList({ events });
+        });
+      });
     </script>
   </head>
 
   <body>
     {% include nav.html %}
 
-    <section id="calendar"></section>
+    <section id="content">
+      <h1 id="calendar-header">
+        <span>beehive</span>
+        {% include calendar_buttons.html %}
+      </h1>
 
-    {% for event in site.data.events %}
-    {% include event_dialog.html event=event index=forloop.index0 %}
-    {% endfor %}
+      <section id="calendar-content">
+        {{ content }}
+      </section>
+    </section>
 
     {% include footer.html %}
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
