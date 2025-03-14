@@ -9,15 +9,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         renderCalendar({ events });
         renderEventList({ events });
-        document.getElementById("event-list-forward").addEventListener("click", () => {
-          moveEventListForward({ events });
-        });
-        document.getElementById("event-list-backward").addEventListener("click", () => {
-          moveEventListBackward({ events });
-        });
-        document.getElementById("event-list-today").addEventListener("click", () => {
-          resetEventList({ events });
-        });
+        addEventListNavigationListeners({ events });
       });
     </script>
   </head>
@@ -26,12 +18,12 @@
     {% include nav.html %}
 
     <section id="content">
-      <h1 id="calendar-header">
+      <h1 id="header">
         <span>beehive</span>
         {% include calendar_buttons.html %}
       </h1>
 
-      <section id="calendar-content">
+      <section id="inner-content">
         {{ content }}
       </section>
     </section>

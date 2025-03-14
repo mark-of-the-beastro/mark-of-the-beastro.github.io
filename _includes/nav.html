@@ -2,6 +2,7 @@
   <nav>
     <ul>
       {% for item in site.data.nav.items %}
+
       <li>
         {% assign base = page.url | split: "/" | slice: 0, 2 | join: "/" %}
         <a
@@ -11,6 +12,7 @@
           {{ item.text }}
         </a>
       </li>
+
       {% endfor %}
     </ul>
   </nav>

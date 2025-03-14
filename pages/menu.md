@@ -3,51 +3,24 @@ layout: menu
 permalink: /menu
 ---
 
-<section id="beelzegrub" class="menu-section">
-
-  <h2>Beelzegrub</h2>
-
-  <ul class="menu-list">
-
-    {% for item in site.data.menu.beelzegrub %}
-    {% include menu_item.html item=item %}
-    {% endfor %}
-
-  </ul>
-
-</section>
+{% include menu_section.md
+    id="beelzegrub"
+    title="Beelzegrub"
+    data=site.data.menu.beelzegrub
+%}
 
 <hr>
 
-<section id="temptations" class="menu-section">
-
-  <h2>Temptations</h2>
-
-  <ul class="menu-list">
-
-    {% for item in site.data.menu.temptations %}
-    {% include menu_item.html item=item %}
-    {% endfor %}
-
-  </ul>
-
-</section>
+{% include menu_section.md
+    id="temptations"
+    title="Temptations"
+    data=site.data.menu.temptations
+%}
 
 <hr>
 
-<section id="weekend-brunch" class="menu-section">
-
-  <h2>
-    Weekend Brunch
-    <small><em>(Sat/Sun til 4pm)</em></small>
-  </h2>
-
-  <ul class="menu-list">
-
-    {% for item in site.data.menu.weekend_brunch %}
-    {% include menu_item.html item=item %}
-    {% endfor %}
-
-  </ul>
-
-</section>
+{% include menu_section.md
+    id="weekend-brunch"
+    title="Weekend Brunch"
+    data=site.data.menu.weekend_brunch
+%}

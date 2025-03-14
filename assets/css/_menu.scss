@@ -1,0 +1,30 @@
+@use 'vars';
+
+.menu-list {
+  list-style: none;
+  padding: 4px 12px;
+  margin: 0;
+}
+
+.menu-item {
+  border: 1px solid vars.$gray-500;
+  border-radius: 4px;
+  padding: 0px 16px;
+  margin-bottom: 4px;
+
+  p {
+    margin: 8px 0px;
+  }
+
+  ul {
+    list-style: square;
+    margin: 8px -16px;
+  }
+}
+
+.menu-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+

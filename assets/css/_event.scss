@@ -1,0 +1,100 @@
+@use 'vars';
+
+#calendar,
+#event-list {
+  margin: 16px 0px;
+}
+
+#event-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  .event-list-date-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-list-date {
+    display: inline-flex;
+    justify-content: space-between;
+    border: medium solid vars.$gray-500;
+    background-color: vars.$gray-400;
+    color: vars.$gray-900;
+    font-weight: bolder;
+    padding: 6px 12px;
+    align-content: center;
+    font-variant-caps: small-caps;
+  }
+
+  button.event-list-item,
+  .empty-event-list-item {
+    display: inline-grid;
+    align-items: center;
+    border: unset;
+    font-size: initial;
+    border-radius: unset;
+    border-left: medium solid vars.$gray-500;
+    border-right: medium solid vars.$gray-500;
+    border-bottom: thin solid vars.$gray-500;
+    background-color: vars.$gray-800;
+    padding: 6px 12px;
+  }
+
+  button.event-list-item {
+    display: inline-grid;
+    color: vars.$gray-200;
+    grid-template-columns: 128px 1fr;
+    justify-items: start;
+    cursor: pointer;
+  }
+
+  .empty-event-list-item {
+    grid-template-columns: 1fr;
+    color: vars.$gray-400;
+    justify-items: center;
+    font-variant-caps: small-caps;
+    font-style: italic;
+  }
+
+  .event-time {
+    color: vars.$gray-400;
+    font-variant-caps: small-caps;
+    font-size: small;
+  }
+}
+
+#event-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    color: vars.$gray-300;
+    border: thin solid vars.$gray-500;
+    vertical-align: middle;
+    line-height: 24px;
+    padding: 4px 8px;
+    height: 34px;
+  }
+}
+
+#event-list-navigation {
+  display: flex;
+  flex-direction: row;
+
+  button {
+    font-size: 24px;
+  }
+
+  #event-list-backward {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  #event-list-forward {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

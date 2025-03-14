@@ -1,0 +1,114 @@
+@use 'vars';
+
+html {
+  background: vars.$gray-600;
+}
+
+body {
+  margin: 0px auto;
+  width: vars.$body-width;
+  height: 100vh;
+  max-width: 100%;
+  background: vars.$gray-700;
+  color: vars.$gray-200;
+  font-family: vars.$font-family;
+}
+
+h1 {
+  font-size: xx-large;
+  padding: vars.$h1-padding 0px;
+  margin: 0;
+}
+
+h2 {
+  font-size: x-large;
+  font-variant-caps: small-caps;
+  padding: vars.$h2-padding 0px;
+  margin: 0;
+}
+
+h3 {
+  font-size: large;
+  font-variant-caps: small-caps;
+}
+
+#content {
+  padding-top: vars.$nav-height;
+  padding-left: vars.$content-padding-x;
+  padding-right: vars.$content-padding-x;
+  height: vars.$content-height;
+  overflow-y: scroll;
+}
+
+#inner-content {
+  overflow-y: scroll;
+  margin-top: vars.$inner-content-top;
+  padding: vars.$inner-content-padding-y 0px;
+  border-top: thin solid vars.$gray-300;
+  height: vars.$inner-content-height;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  height: vars.$header-height;
+  width: vars.$content-width;
+  top: vars.$nav-height;
+
+  #header-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: vars.$body-width) {
+  #header {
+    width: vars.$header-width-sm;
+  }
+}
+
+button,
+.button {
+  background-color: vars.$gray-700;
+  border: medium double vars.$gray-500;
+  border-radius: 4px;
+  color: vars.$gray-300;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: initial;
+}
+
+button:hover,
+.button:hover {
+  cursor: pointer;
+}
+
+.button.active,
+button.active,
+.button:hover,
+button:hover {
+  background-color: vars.$gray-900;
+  color: vars.$gray-200;
+}
+
+dialog[open] {
+  width: 768px;
+  max-width: 70%;
+  background-color: #212121;
+  color: #d8d8d8;
+  border: thick double #d8d8d8;
+  box-shadow: 8px 8px 6px #1a1a1a;
+
+  button {
+    float: right;
+  }
+}

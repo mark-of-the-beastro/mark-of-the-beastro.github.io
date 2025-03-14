@@ -10,7 +10,7 @@ permalink: /menu/drinks
   <ul class="menu-list">
 
     {% for item in site.data.menu.drinks %}
-    {% include drink_item.html item=item %}
+      {% include drink_item.html item=item %}
     {% endfor %}
 
   </ul>

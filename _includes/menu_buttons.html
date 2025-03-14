@@ -1,14 +1,16 @@
 {% assign suffix = page.url | split: "/" | last %}
 
-<a
-  class="button {% if suffix == 'menu' %}active{% endif %}"
-  href="{% link pages/menu.md %}"
->
-  food
-</a>
-<a
-  class="button {% if suffix == 'drinks' %}active{% endif %}"
-  href="{% link pages/drinks.md %}"
->
-  drinks
-</a>
+<div id="header-buttons">
+  <a
+    class="button {% if suffix == 'menu' %}active{% endif %}"
+    href="{% link pages/menu.md %}"
+  >
+    food
+  </a>
+  <a
+    class="button {% if suffix == 'drinks' %}active{% endif %}"
+    href="{% link pages/drinks.md %}"
+  >
+    drinks
+  </a>
+</div>

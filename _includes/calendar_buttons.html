@@ -1,14 +1,16 @@
 {% assign suffix = page.url | split: "/" | last %}
 
-<a
-  class="button {% if suffix == 'calendar' %}active{% endif %}"
-  href="{% link pages/weekly_calendar.md %}"
->
-  weekly
-</a>
-<a
-  class="button {% if suffix == 'monthly' %}active{% endif %}"
-  href="{% link pages/monthly_calendar.md %}"
->
-  monthly
-</a>
+<div id="header-buttons">
+  <a
+    class="button {% if suffix == 'calendar' %}active{% endif %}"
+    href="{% link pages/weekly_calendar.md %}"
+  >
+    weekly
+  </a>
+  <a
+    class="button {% if suffix == 'monthly' %}active{% endif %}"
+    href="{% link pages/monthly_calendar.md %}"
+  >
+    monthly
+  </a>
+</div>

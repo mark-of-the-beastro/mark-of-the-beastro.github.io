@@ -1,0 +1,79 @@
+@use 'vars';
+
+
+:root {
+  --fc-small-font-size: 0.7em;
+  --fc-page-bg-color: #{vars.$gray-500};
+  --fc-neutral-bg-color: #{vars.$gray-500};
+  --fc-neutral-text-color: #{vars.$pink};
+  --fc-border-color: #{vars.$gray-500};
+
+  --fc-button-text-color: #{vars.$gray-300};
+  --fc-button-bg-color: #{vars.$gray-700};
+  --fc-button-border-color: #{vars.$gray-500};
+  --fc-button-hover-bg-color: #{vars.$gray-900};
+  --fc-button-hover-border-color: #{vars.$gray-500};
+  --fc-button-active-bg-color: #{vars.$gray-900};
+  --fc-button-active-border-color: #{vars.$gray-500};
+
+  --fc-daygrid-event-dot-width: 4px;
+
+  --fc-event-bg-color: #{vars.$gray-600};
+  --fc-event-border-color: #{vars.$gray-500};
+  --fc-event-text-color: #{vars.$gray-200};
+  --fc-event-selected-overlay-color: #{vars.$gray-700};
+
+  --fc-more-link-bg-color: #{vars.$pink};
+  --fc-more-link-text-color: #{vars.$pink};
+
+  --fc-event-resizer-thickness: 8px;
+  --fc-event-resizer-dot-total-width: 8px;
+  --fc-event-resizer-dot-border-width: 1px;
+
+  --fc-non-business-color: #{vars.$pink};
+  --fc-bg-event-color: #{vars.$pink};
+  --fc-bg-event-opacity: 0.3;
+  --fc-highlight-color: #{vars.$pink};
+  --fc-today-bg-color: #{vars.$gray-600};
+  --fc-now-indicator-color: #{vars.$pink};
+  --fc-list-event-dot-width: 10px;
+  --fc-list-event-hover-bg-color: #{vars.$pink};
+}
+
+.fc-col-header-cell {
+  background: vars.$gray-500;
+  color: vars.$gray-900;
+}
+
+.fc-event-time {
+  display: none;
+}
+
+.fc-daygrid-event {
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+.fc-dayGridMonth-view {
+  min-width: 768px;
+}
+
+.fc-toolbar.fc-header-toolbar.fc-toolbar-ltr {
+  margin-bottom: 0;
+}
+
+#calendar > .fc-footer-toolbar.fc-toolbar {
+  margin-top: 16px;
+}
+
+.fc-toolbar-chunk > h2.fc-toolbar-title {
+  font-size: x-large;
+}
+
+.fc-button.fc-button-primary {
+  color: vars.$gray-300;
+  border: thin solid vars.$gray-500;
+  line-height: 24px;
+  padding: 4px 8px;
+  height: 34px;
+}
