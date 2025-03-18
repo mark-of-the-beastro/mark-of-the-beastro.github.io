@@ -26,7 +26,7 @@ const dateRange = (start, end) => strRange(...[start, end].map(formatDate));
 
 const formatDate = (date, { includeYear } = { includeYear: false }) => {
   const options = {
-    month: "long",
+    month: "short",
     day: "numeric",
   };
   if (includeYear) {
@@ -281,12 +281,13 @@ const resetEventList = (events) => {
 const renderHours = (days) => {
   const footer = document.querySelector("footer");
   const dayOfWeek = getDayOfWeek();
-  const { start, end } = days[dayOfWeek];
+  const { open, start, end } = days[dayOfWeek];
+  const time = open ? strRange(start, end) : "closed";
   footer.appendChild(
     createElement("section", {
       children: [
         createElement("strong", { innerHTML: dayOfWeek + " hours" }),
-        createElement("span", { innerHTML: strRange(start, end) }),
+        createElement("span", { innerHTML: time }),
       ],
     }),
   );

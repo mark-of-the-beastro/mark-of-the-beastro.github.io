@@ -47,6 +47,10 @@
     grid-template-columns: 128px 1fr;
     justify-items: start;
     cursor: pointer;
+
+    &:hover, &:active, &:focus-visible {
+      background-color: vars.$red-700;
+    }
   }
 
   .empty-event-list-item {

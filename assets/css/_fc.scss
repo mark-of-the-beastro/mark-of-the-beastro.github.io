@@ -54,6 +54,14 @@
   cursor: pointer;
 }
 
+.fc-daygrid-event:hover,
+.fc-daygrid-event:focus-visible,
+{
+  color: vars.$gray-200;
+  background-color: vars.$red-800;
+  border: thin solid vars.$red-300;
+}
+
 .fc-dayGridMonth-view {
   min-width: 768px;
 }
@@ -71,9 +79,23 @@
 }
 
 .fc-button.fc-button-primary {
-  color: vars.$gray-300;
-  border: thin solid vars.$gray-500;
+  color: vars.$red-200;
+  background-color: vars.$gray-800;
+  border: thin solid vars.$gray-400;
   line-height: 24px;
   padding: 4px 8px;
   height: 34px;
+}
+
+.fc-button.fc-button-primary:hover,
+.fc-button.fc-button-primary:focus-visible,
+{
+  color: vars.$gray-200;
+  background-color: vars.$red-800;
+}
+
+.fc-button.fc-button-primary.fc-button-active {
+  color: vars.$gray-200 !important;
+  background-color: vars.$red-900 !important;
+  border: thin solid vars.$red-400 !important;
 }

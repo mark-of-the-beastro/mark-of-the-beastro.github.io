@@ -76,28 +76,29 @@ h3 {
 
 button,
 .button {
-  background-color: vars.$gray-700;
-  border: medium double vars.$gray-500;
+  color: vars.$red-200;
+  background-color: vars.$gray-800;
+  border: thin solid vars.$gray-400;
   border-radius: 4px;
-  color: vars.$gray-300;
-  padding: 6px 12px;
+  padding: 8px 16px;
   font-family: inherit;
   font-weight: normal;
   text-decoration: none;
   font-size: initial;
 }
 
-button:hover,
-.button:hover {
+button:hover, button:focus-visible,
+.button:hover, .button:focus-visible {
+  color: vars.$gray-200;
+  background-color: vars.$red-800;
   cursor: pointer;
 }
 
 .button.active,
-button.active,
-.button:hover,
-button:hover {
-  background-color: vars.$gray-900;
+button.active {
   color: vars.$gray-200;
+  background-color: vars.$red-900;
+  border-color: vars.$red-400;
 }
 
 dialog[open] {

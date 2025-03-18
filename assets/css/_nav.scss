@@ -8,7 +8,7 @@ aside {
   height: vars.$nav-height;
   max-width: vars.$body-width;
   z-index: 2;
-  box-shadow: 0px 2px 2px vars.$gray-900;
+  box-shadow: 0px 2px 2px vars.$red-900;
 }
 
 aside nav {
@@ -32,7 +32,7 @@ aside nav ul li {
 aside nav ul li a:visited,
 aside nav ul li a {
   text-decoration: none;
-  color: vars.$gray-400;
+  color: vars.$red-300;
   display: block;
   padding: 16px;
   font-family: Monaco, Courier, monospace;
@@ -42,13 +42,22 @@ aside nav ul li a {
 }
 
 aside nav ul li a:hover,
-aside nav ul li a:active,
-aside nav ul li a.active {
+aside nav ul li a.active,
+aside nav ul li a:focus-visible {
   margin-bottom: -3px;
   text-decoration: none;
-  background-color: vars.$gray-900;
   color: vars.$gray-200;
   font-weight: bolder;
+}
+
+aside nav ul li a:hover,
+aside nav ul li a:focus-visible,
+{
+  background-color: vars.$red-700;
+}
+
+aside nav ul li a.active {
+  background-color: vars.$red-800;
 }
 
 aside nav:after {
